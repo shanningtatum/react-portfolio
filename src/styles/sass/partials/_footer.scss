@@ -1,7 +1,19 @@
 footer{
     position: fixed;
-    background-color:blue;
     bottom:0;
     height:10vh;
-    width:clamp(200px, 15%, 400px);
+    width:15%;
+    border-right:1px $purple solid;
+    background-color:white;
+
+}
+
+.footerDark{
+    background-color:black;
+    color:white;
+}
+
+.footerLight{
+    background-color:white;
+    color:black;
 }

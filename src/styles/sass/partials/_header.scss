@@ -1,11 +1,22 @@
 header{
     position: fixed;
     height:90vh;
-    width:clamp(200px, 15%, 400px);
+    width:15%;
+    border-right:1px $purple solid;
+
+    nav{
+        border:2px orange solid;
+        height:50vh;
+    }
 
     ul{
         list-style:none;
-        border:2px orange solid;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        border:2px red solid;
+        width:100%;
+        height:100%;
     }
 
     a{
@@ -26,8 +37,8 @@ header{
 }
 
 .headerLight{
-    background-color:red;
 
+    background-color:white;
     a{
         color:black;
         &:hover{

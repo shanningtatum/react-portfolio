@@ -220,18 +220,27 @@ template {
 .wrapper {
   max-width: 1280px;
   width: 80%;
-  margin: auto;
-  border: 2px red solid;
+  margin: 0 auto;
 }
 
 header {
   position: fixed;
   height: 90vh;
-  width: clamp(200px, 15%, 400px);
+  width: 15%;
+  border-right: 1px #A23B72 solid;
+}
+header nav {
+  border: 2px orange solid;
+  height: 50vh;
 }
 header ul {
   list-style: none;
-  border: 2px orange solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px red solid;
+  width: 100%;
+  height: 100%;
 }
 header a {
   text-decoration: none;
@@ -248,13 +257,20 @@ header a {
 }
 
 .headerLight {
-  background-color: red;
+  background-color: white;
 }
 .headerLight a {
   color: black;
 }
 .headerLight a:hover {
   color: grey;
+}
+
+.landingSection .wrapper {
+  margin-left: auto !important;
+}
+.landingSection h1 {
+  margin: auto;
 }
 
 main {
@@ -266,14 +282,21 @@ section {
   height: 100vh;
 }
 
-h1 {
-  margin: 0;
-}
-
 footer {
   position: fixed;
-  background-color: blue;
   bottom: 0;
   height: 10vh;
-  width: clamp(200px, 15%, 400px);
+  width: 15%;
+  border-right: 1px #A23B72 solid;
+  background-color: white;
+}
+
+.footerDark {
+  background-color: black;
+  color: white;
+}
+
+.footerLight {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */

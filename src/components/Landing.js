@@ -1,7 +1,9 @@
 function Landing() {
   return (
-    <section>
-      <h1>Hi, my name is Shannon</h1>
+    <section className="landingSection">
+      <div className="wrapper">
+        <h1>Hi, my name is Shannon</h1>
+      </div>
     </section>
   );
 }
