@@ -1,0 +1,7 @@
+footer{
+    position: fixed;
+    background-color:blue;
+    bottom:0;
+    height:10vh;
+    width:clamp(200px, 15%, 400px);
+}
