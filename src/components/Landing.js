@@ -14,8 +14,16 @@ function Landing() {
           Web Developer <span className="greyText">in Toronto</span>
         </h1>
         <div className="scrollIcon">
-          <div className="mouseImage"></div>
-          <div className="circleBackground"></div>
+          <div
+            className={darkMode ? "mouseImage mouseImageDark" : "mouseImage"}
+          ></div>
+          <div
+            className={
+              darkMode
+                ? "circleBackground circleBackgroundDark"
+                : "circleBackground"
+            }
+          ></div>
         </div>
         <div className="socialLinks">
           <ul>
