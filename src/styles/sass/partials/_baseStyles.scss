@@ -11,11 +11,18 @@ html{
 h1{
     font-family:$sansSerifFont;
     font-weight:normal;
+    font-size:clamp(1.1rem,4vw, 2.3rem);
+
 }
 
 h2{
     font-family:$serifFont;
     font-weight:normal;
+    font-size:clamp(1.5rem, 4vw, 2rem)
+}
+
+.strongName{
+    font-size:clamp(1.5rem,4vw, 2.7rem);
 }
 
 #about, #portfolio, #contact{

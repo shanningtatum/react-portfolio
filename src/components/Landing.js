@@ -1,13 +1,22 @@
 import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { useContext } from "react";
+import { DarkModeContext } from "./DarkModeContext";
 
 function Landing() {
+  const { darkMode } = useContext(DarkModeContext);
   return (
-    <section className="landingSection">
+    <section
+      className={darkMode ? "landingSection landingDark" : "landingSection"}
+    >
       <div className="wrapper">
         <h1>
           Hello, I'm <span className="strongName">Shannon Tao</span> Front-End
           Web Developer <span className="greyText">in Toronto</span>
         </h1>
+        <div className="scrollIcon">
+          <div className="mouseImage"></div>
+          <div className="circleBackground"></div>
+        </div>
         <div className="socialLinks">
           <ul>
             <li>

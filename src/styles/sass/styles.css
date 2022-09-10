@@ -230,11 +230,17 @@ html {
 h1 {
   font-family: "Inter", sans-serif;
   font-weight: normal;
+  font-size: clamp(1.1rem, 4vw, 2.3rem);
 }
 
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: normal;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.strongName {
+  font-size: clamp(1.5rem, 4vw, 2.7rem);
 }
 
 #about, #portfolio, #contact {
@@ -308,10 +314,10 @@ header ul {
   color: #FFF;
 }
 .headerDark a::before {
-  background-color: #FFF;
+  color: #FCB0D8;
 }
 .headerDark a:hover, .headerDark a:focus {
-  color: #FFF;
+  color: #FCB0D8;
 }
 
 .headerLight {
@@ -337,6 +343,7 @@ header ul {
 
 .landingSection .wrapper {
   display: flex;
+  flex-direction: column;
   margin: auto auto 0 !important;
   height: 100%;
 }
@@ -348,7 +355,7 @@ header ul {
   display: flex;
   font-family: "Playfair Display", serif;
   color: #202020;
-  font-size: clamp(2.2rem, 4vw, 2.7rem);
+  font-weight: bold;
 }
 .landingSection .greyText {
   color: #51586D;
@@ -385,6 +392,33 @@ header ul {
   background-color: #a23b72;
 }
 
+.landingDark {
+  background-color: #202020;
+}
+.landingDark h1 {
+  color: #FFF;
+}
+.landingDark .strongName {
+  color: #FCB0D8;
+}
+.landingDark .greyText {
+  color: #FCB0D8;
+}
+
+.scrollIcon {
+  border: 2px red solid;
+  height: 20%;
+  position: relative;
+  width: 100%;
+}
+.scrollIcon .mouseImage {
+  margin: 0 auto;
+  border: 2px #202020 solid;
+  width: 40px;
+  height: 60px;
+  border-radius: 40px;
+}
+
 main {
   width: 85%;
   margin-left: auto;
@@ -392,6 +426,7 @@ main {
 
 section {
   height: 100vh;
+  border: 2px red solid;
 }
 
 footer {
@@ -405,7 +440,7 @@ footer {
   font-family: "Playfair Display", serif;
 }
 footer a {
-  color: rgb(221, 134, 180);
+  color: #FCB0D8;
   text-decoration: none;
   transition: 0.3s color;
 }
