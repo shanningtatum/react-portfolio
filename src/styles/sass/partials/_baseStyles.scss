@@ -7,3 +7,17 @@ html{
     width:80%;
     margin: 0 auto;
 }
+
+h1{
+    font-family:$sansSerifFont;
+    font-weight:normal;
+}
+
+h2{
+    font-family:$serifFont;
+    font-weight:normal;
+}
+
+#about, #portfolio, #contact{
+    text-align: center;
+}

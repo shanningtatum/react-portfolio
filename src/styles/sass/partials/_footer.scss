@@ -9,7 +9,7 @@ footer{
     font-family:$serifFont;
 
     a{
-        color:rgb(197, 90, 147);
+        color:rgb(221, 134, 180);
         text-decoration:none;
         transition:0.3s color;
         
@@ -24,7 +24,6 @@ h3{
     font-weight:normal;
     font-size:clamp(0.6rem, 2vw, 0.8rem);
 
-
 }
 
 
@@ -36,9 +35,21 @@ h3{
     h3{
         color:$white;
     }
+
+
 }
 
 .footerLight{
     background-color:$white;
     color:$black;
+
+    a{
+        color:rgb(194, 96, 148);
+        text-decoration:none;
+        transition:0.3s color;
+        
+        &:hover, &:focus{
+            color:$purple;
+        }
+    }
 }

@@ -227,6 +227,20 @@ html {
   margin: 0 auto;
 }
 
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+#about, #portfolio, #contact {
+  text-align: center;
+}
+
 @font-face {
   font-family: "Playfair Display";
   src: url("../../fonts/PlayfairDisplay-Regular.ttf");
@@ -310,11 +324,65 @@ header ul {
   color: #A23B72;
 }
 
+.skipLink {
+  border: 2px red solid;
+  position: absolute;
+  top: 5px;
+  left: -1000px;
+}
+.skipLink:focus {
+  display: block;
+  left: 0px;
+}
+
 .landingSection .wrapper {
-  margin-left: auto !important;
+  display: flex;
+  margin: auto auto 0 !important;
+  height: 100%;
 }
 .landingSection h1 {
+  margin: auto 0 auto;
+  color: #A23B72;
+}
+.landingSection .strongName {
+  display: flex;
+  font-family: "Playfair Display", serif;
+  color: #202020;
+  font-size: clamp(2.2rem, 4vw, 2.7rem);
+}
+.landingSection .greyText {
+  color: #51586D;
+}
+.landingSection .landingText {
+  border: 2px red solid;
   margin: auto;
+}
+
+.socialLinks {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.socialLinks ul {
+  list-style: none;
+  padding: 0;
+}
+.socialLinks li {
+  margin: 20px;
+}
+.socialLinks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(162, 59, 114, 0.4);
+  color: #FFF;
+  transition: 0.3s background-color;
+}
+.socialLinks a:hover, .socialLinks a:focus {
+  background-color: #a23b72;
 }
 
 main {
@@ -337,7 +405,7 @@ footer {
   font-family: "Playfair Display", serif;
 }
 footer a {
-  color: rgb(197, 90, 147);
+  color: rgb(221, 134, 180);
   text-decoration: none;
   transition: 0.3s color;
 }
@@ -346,7 +414,7 @@ footer a:hover, footer a:focus {
 }
 
 h3 {
-  color: #818AA3;
+  color: #51586D;
   font-weight: normal;
   font-size: clamp(0.6rem, 2vw, 0.8rem);
 }
@@ -362,4 +430,12 @@ h3 {
 .footerLight {
   background-color: #FFF;
   color: #202020;
+}
+.footerLight a {
+  color: rgb(194, 96, 148);
+  text-decoration: none;
+  transition: 0.3s color;
+}
+.footerLight a:hover, .footerLight a:focus {
+  color: #A23B72;
 }/*# sourceMappingURL=styles.css.map */

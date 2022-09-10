@@ -65,10 +65,24 @@ header{
 .headerLight{
 
     background-color:white;
+    
     a{
         color:$black;
         &:hover, &:focus{
             color:$purple;
         }
+    }
+}
+
+// SKIP LINK
+.skipLink{
+    border:2px red solid;
+    position: absolute;
+    top:5px;
+    left:-1000px;
+
+    &:focus{
+        display:block;
+        left:0px;
     }
 }
