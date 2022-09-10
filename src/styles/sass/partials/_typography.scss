@@ -1,0 +1,25 @@
+// Playfair Regular
+@font-face{
+    font-family:'Playfair Display';
+    src:url('../../fonts/PlayfairDisplay-Regular.ttf');
+    font-weight:normal;
+}
+
+// Playfair Bold
+@font-face{
+    font-family:'Playfair Display';
+    src:url('../../fonts/PlayfairDisplay-Bold.ttf');
+    font-weight:bold;
+}
+
+// Inter
+@font-face{
+    font-family:'Inter';
+    src:url('../../fonts/Inter-Regular.ttf');
+    font-weight:normal;
+}
+
+// NAV BAR
+.navBar a{
+    font-size:clamp(0.9rem, 2vw, 1.1rem);
+}

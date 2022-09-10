@@ -4,16 +4,41 @@ footer{
     height:10vh;
     width:15%;
     border-right:1px $purple solid;
-    background-color:white;
+    background-color:$white;
+    text-align: center;
+    font-family:$serifFont;
+
+    a{
+        color:rgb(197, 90, 147);
+        text-decoration:none;
+        transition:0.3s color;
+        
+        &:hover, &:focus{
+            color:$purple;
+        }
+    }
+}
+
+h3{
+    color:$grey;
+    font-weight:normal;
+    font-size:clamp(0.6rem, 2vw, 0.8rem);
+
 
 }
 
+
+
 .footerDark{
-    background-color:black;
-    color:white;
+    background-color:$black;
+    color:$white;
+    
+    h3{
+        color:$white;
+    }
 }
 
 .footerLight{
-    background-color:white;
-    color:black;
+    background-color:$white;
+    color:$black;
 }

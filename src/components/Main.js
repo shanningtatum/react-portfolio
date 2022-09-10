@@ -5,7 +5,7 @@ import Contact from "./Contact";
 
 function Main() {
   return (
-    <main>
+    <main id="mainContent">
       <Landing />
       <About />
       <Portfolio />

@@ -5,7 +5,14 @@ function Footer() {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <footer className={darkMode ? "footer footerDark" : "footer footerLight"}>
-      <h3>Created by Me</h3>
+      <div className="wrapper">
+        <h3>
+          Created by <a href="https://github.com/shanningtatum">Shannon Tao</a>
+        </h3>
+        <h3>
+          Design by <a href="#">Marketify</a>
+        </h3>
+      </div>
     </footer>
   );
 }
