@@ -6,7 +6,7 @@ function Landing() {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <section
-      className={darkMode ? "landingSection landingDark" : "landingSection"}
+      className={darkMode ? "landingSection darkTheme" : "landingSection"}
     >
       <div className="wrapper">
         <h1>
@@ -28,19 +28,19 @@ function Landing() {
         <div className="socialLinks">
           <ul>
             <li>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/shannon-tao-b95159240/">
                 <FaLinkedinIn />
                 <span className="sr-only">Link to LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://github.com/shanningtatum">
                 <FaGithub />
                 <span className="sr-only">Link to GitHub</span>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/drawingsbyshanner/">
                 <FaInstagram />
                 <span className="sr-only">Link to Instagram</span>
               </a>

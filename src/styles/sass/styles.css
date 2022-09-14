@@ -427,19 +427,6 @@ header ul {
   background-color: #a23b72;
 }
 
-.landingDark {
-  background-color: #202020;
-}
-.landingDark h1 {
-  color: #FFF;
-}
-.landingDark .strongName {
-  color: #FCB0D8;
-}
-.landingDark .greyText {
-  color: #FCB0D8;
-}
-
 .scrollIcon {
   height: 20%;
   position: relative;
@@ -488,8 +475,101 @@ main {
 }
 
 section {
+  padding: 10px 0;
+}
+
+section h2 {
+  position: relative;
+}
+section h2::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  background-color: rgba(162, 59, 114, 0.5);
+  bottom: 0;
+  z-index: -1;
+}
+section:nth-child(odd) {
+  background-color: #FAFAFA;
+}
+section:nth-child(even) {
+  background-color: #FFF;
+}
+section:last-child {
+  background-color: #202020;
+  color: #FFF;
+}
+
+.darkTheme {
+  background-color: #202020;
+  color: #FFF;
+}
+.darkTheme h1 {
+  color: #FFF;
+}
+.darkTheme .strongName {
+  color: #FCB0D8;
+}
+.darkTheme .greyText {
+  color: #FCB0D8;
+}
+
+.darkTheme:nth-child(odd) {
+  background-color: #202020;
+}
+.darkTheme:nth-child(even) {
+  background-color: rgba(32, 32, 32, 0.98);
+}
+.darkTheme .toolKitSection p {
+  color: #FFF;
+}
+.darkTheme .toolKitSection .devicon {
+  color: #FFF;
+}
+.darkTheme .toolKitSection li {
+  background-color: transparent;
+}
+
+.landingSection {
   height: 100vh;
-  border: 2px red solid;
+}
+
+.aboutSection .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMeSection {
+  flex-basis: 50%;
+}
+
+.toolKitSection {
+  flex-basis: 50%;
+}
+.toolKitSection ul {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-content: center;
+}
+.toolKitSection li {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 150px;
+  margin: 20px auto;
+}
+.toolKitSection p {
+  font-family: "Inter", sans-serif;
+  color: #202020;
+}
+.toolKitSection .devicon {
+  color: rgba(32, 32, 32, 0.7);
+  font-size: clamp(2rem, 10vw, 4rem);
 }
 
 footer {
@@ -515,6 +595,7 @@ h3 {
   color: #51586D;
   font-weight: normal;
   font-size: clamp(0.6rem, 2vw, 0.8rem);
+  white-space: nowrap;
 }
 
 .footerDark {

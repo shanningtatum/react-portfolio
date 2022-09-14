@@ -4,6 +4,122 @@ main{
 }
 
 section{
+    padding:10px 0;
+}
+
+// ABOUT SECTION
+section{
+
+    h2{
+        position: relative;
+
+        &::before{
+            content:'';
+            position: absolute;
+            width:120px;
+            height:30px;
+            background-color:rgba($purple, 0.5);
+            bottom:0;
+            z-index:-1;
+            
+        }
+    }
+
+    &:nth-child(odd){
+        background-color:$offWhite;
+    }
+    &:nth-child(even){
+        background-color:$white;
+    }
+    &:last-child{
+        background-color:$black;
+        color:$white;
+    }
+}
+
+.darkTheme{
+    background-color:$black;
+    color:$white;
+
+    h1{
+        color:$white;
+    }
+
+    .strongName{
+        color:$pink;
+    }
+
+    .greyText{
+        color:$pink;
+    }
+
+    
+}
+
+.darkTheme{
+    &:nth-child(odd){
+        background-color:rgba($black, $alpha: 1);
+    }
+    &:nth-child(even){
+        background-color:rgba($black, $alpha: 0.98);
+    }
+    .toolKitSection{
+        p{
+            color:$white;
+        }
+        .devicon{
+            color:$white;
+        }
+        li{
+            background-color:transparent;
+        }
+    }
+}
+
+// LANDING PAGE
+
+.landingSection{
     height:100vh;
-    border:2px red solid;
+}
+
+.aboutSection{
+    .wrapper{
+        display:flex;
+        flex-direction:column;
+    }
+
+}
+
+.aboutMeSection{
+    flex-basis:50%;
+
+}
+
+.toolKitSection{
+    flex-basis:50%;
+    ul{
+        display:grid;
+        grid-template-rows:repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
+        list-style:none;
+        padding:0;
+        justify-content: center;
+        align-content: center;
+    }
+    li{
+        display:flex;
+        flex-direction:column;
+        align-content: center;
+        width:150px;
+        margin: 20px auto;
+    }
+    p{
+        font-family:$sansSerifFont;
+        color:$black;
+    }
+    .devicon{
+        color:rgba($black, $alpha: 0.7);
+        font-size:clamp(2rem, 10vw, 4rem);
+    }
+
 }
