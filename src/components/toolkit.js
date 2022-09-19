@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const projects = [
   {
-    project: "Shopper Mapper",
+    name: "Shopper Mapper",
     live: "https://shopper-mapper.netlify.app/",
     github: "https://github.com/shopper-mapper-cohort42/project-04",
     img: "./assets/project4-desktop-mobile.png",
@@ -17,7 +17,7 @@ const projects = [
     },
   },
   {
-    project: "Bill Splitter",
+    name: "Bill Splitter",
     live: "https://shannontao-project3-production.netlify.app/",
     github: "https://github.com/shanningtatum/shannontao-project3",
     img: "./assets/guberEats.png",
@@ -31,7 +31,7 @@ const projects = [
     },
   },
   {
-    project: "Perplexity Digital Scoreboard",
+    name: "Perplexity Digital Scoreboard",
     live: "https://peg-leaderboard.netlify.app/",
     github: "https://github.com/shanningtatum/scoreboard",
     img: "./assets/peg-leaderboard.png",
@@ -45,7 +45,7 @@ const projects = [
     },
   },
   {
-    project: "Pokemon Matching Game",
+    name: "Pokemon Matching Game",
     live: "https://pokemonmemorygame.netlify.app/",
     github: "https://github.com/huddle3-2/shannon-taimoor-project2",
     img: "./assets/project2mobile.png",
@@ -58,7 +58,7 @@ const projects = [
     },
   },
   {
-    project: "Pokemon Quiz",
+    name: "Pokemon Quiz",
     live: "https://shanningtatum.github.io/pokemon-quiz/",
     github: "https://github.com/shanningtatum/pokemon-quiz",
     img: "./assets/pokeQuiz-mobileDesktop.png",
@@ -72,7 +72,7 @@ const projects = [
     },
   },
   {
-    project: "Multi-Page Website",
+    name: "Multi-Page Website",
     live: "https://shannontaoproject1.netlify.app/",
     github: "https://github.com/shanningtatum/shannonTao-project1",
     img: "./assets/project1desktop.png",
@@ -84,7 +84,7 @@ const projects = [
     },
   },
   {
-    project: "Point of Sale System",
+    name: "Point of Sale System",
     live: "https://shannontao-pointofsale.netlify.app/",
     github: "https://github.com/shanningtatum/pointOfSale",
     img: "./assets/pos-tablet.png",
@@ -97,7 +97,7 @@ const projects = [
     },
   },
   {
-    project: "Perplexity Escape Games Website Mock-Up",
+    name: "Perplexity Escape Games Website Mock-Up",
     live: "https://shanningtatum.github.io/perplexity/",
     github: "https://github.com/shanningtatum/perplexity",
     img: "./assets/perplexityMobile.png",
@@ -161,4 +161,5 @@ const toolkit = [
     tool: "Figma",
   },
 ];
+
 export { projects, toolkit };

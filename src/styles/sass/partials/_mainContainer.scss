@@ -25,14 +25,8 @@ section{
         }
     }
 
-    &:nth-child(odd){
-        background-color:$offWhite;
-    }
-    &:nth-child(even){
-        background-color:$white;
-    }
     &:last-child{
-        background-color:$black;
+        background-color:$black !important;
         color:$white;
     }
 }
@@ -57,18 +51,19 @@ section{
 }
 
 .darkTheme{
-    &:nth-child(odd){
-        background-color:rgba($black, $alpha: 1);
-    }
+
     &:nth-child(even){
         background-color:rgba($black, $alpha: 0.98);
     }
+
     .toolKitSection{
         p{
             color:$white;
+            text-align: center;
         }
         .devicon{
             color:$white;
+            text-align: center;
         }
         li{
             background-color:transparent;
@@ -84,6 +79,8 @@ section{
 
 .aboutSection{
     .wrapper{
+        width:100%;
+        max-width:none;
         display:flex;
         flex-direction:column;
     }
@@ -92,11 +89,19 @@ section{
 
 .aboutMeSection{
     flex-basis:50%;
-
+    width:80%;
+    margin:auto;
 }
 
 .toolKitSection{
     flex-basis:50%;
+    width:100%;
+    background-color:$offWhite;
+    margin:0 auto;
+
+    h2{
+        text-align: center;
+    }
     ul{
         display:grid;
         grid-template-rows:repeat(2, 1fr);
@@ -122,4 +127,51 @@ section{
         font-size:clamp(2rem, 10vw, 4rem);
     }
 
+}
+.portfolioSection{
+    ul{
+        list-style:none;
+    }
+    li{
+        margin-bottom:30px;
+    }
+}
+// portfolio section
+.portfolioSection.darkTheme{
+    background-color:rgba($black, $alpha: 0.98);
+
+}
+
+.projectContainer{
+    display:flex;
+    position: relative;
+    height:max-content;
+    
+    .projectTool{
+        position: absolute;
+        left:-20px;
+
+        p{
+            background-color:rgba($purple, 1);
+            padding:5px 10px;
+            color:$white;
+        }
+    }
+
+    .projectImage{
+        flex-basis:50%;
+        background-color:rebeccapurple;
+        border-top-left-radius:20px;
+        border-bottom-left-radius:20px;
+    }
+
+    img{
+        width:100%;
+    }
+    .projectText{
+        flex-basis:50%;
+        background-color:lightblue;
+        border-top-right-radius:20px;
+        border-bottom-right-radius:20px;
+    }
 }

@@ -1,4 +1,4 @@
-import { projects, toolkit } from "./toolkit";
+import { toolkit } from "./toolkit";
 import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
@@ -37,7 +37,9 @@ function About() {
             to grow as a developer and an individual.
           </p>
         </div>
-        <div className="toolKitSection">
+        <div
+          className={darkMode ? "toolKitSection darkTheme" : "toolKitSection"}
+        >
           <h2>My Toolkit</h2>
           <ul>
             {toolkit.map((tool) => {

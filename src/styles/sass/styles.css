@@ -278,10 +278,6 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2.7rem);
 }
 
-#about, #portfolio, #contact {
-  text-align: center;
-}
-
 @font-face {
   font-family: "Playfair Display";
   src: url("../../fonts/PlayfairDisplay-Regular.ttf");
@@ -490,14 +486,8 @@ section h2::before {
   bottom: 0;
   z-index: -1;
 }
-section:nth-child(odd) {
-  background-color: #FAFAFA;
-}
-section:nth-child(even) {
-  background-color: #FFF;
-}
 section:last-child {
-  background-color: #202020;
+  background-color: #202020 !important;
   color: #FFF;
 }
 
@@ -515,17 +505,16 @@ section:last-child {
   color: #FCB0D8;
 }
 
-.darkTheme:nth-child(odd) {
-  background-color: #202020;
-}
 .darkTheme:nth-child(even) {
   background-color: rgba(32, 32, 32, 0.98);
 }
 .darkTheme .toolKitSection p {
   color: #FFF;
+  text-align: center;
 }
 .darkTheme .toolKitSection .devicon {
   color: #FFF;
+  text-align: center;
 }
 .darkTheme .toolKitSection li {
   background-color: transparent;
@@ -536,16 +525,26 @@ section:last-child {
 }
 
 .aboutSection .wrapper {
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
 }
 
 .aboutMeSection {
   flex-basis: 50%;
+  width: 80%;
+  margin: auto;
 }
 
 .toolKitSection {
   flex-basis: 50%;
+  width: 100%;
+  background-color: #FAFAFA;
+  margin: 0 auto;
+}
+.toolKitSection h2 {
+  text-align: center;
 }
 .toolKitSection ul {
   display: grid;
@@ -570,6 +569,49 @@ section:last-child {
 .toolKitSection .devicon {
   color: rgba(32, 32, 32, 0.7);
   font-size: clamp(2rem, 10vw, 4rem);
+}
+
+.portfolioSection ul {
+  list-style: none;
+}
+.portfolioSection li {
+  margin-bottom: 30px;
+}
+
+.portfolioSection.darkTheme {
+  background-color: rgba(32, 32, 32, 0.98);
+}
+
+.projectContainer {
+  display: flex;
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.projectContainer .projectTool {
+  position: absolute;
+  left: -20px;
+}
+.projectContainer .projectTool p {
+  background-color: #a23b72;
+  padding: 5px 10px;
+  color: #FFF;
+}
+.projectContainer .projectImage {
+  flex-basis: 50%;
+  background-color: rebeccapurple;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.projectContainer img {
+  width: 100%;
+}
+.projectContainer .projectText {
+  flex-basis: 50%;
+  background-color: lightblue;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 footer {
