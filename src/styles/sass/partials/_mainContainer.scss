@@ -69,6 +69,7 @@ section{
             background-color:transparent;
         }
     }
+
 }
 
 // LANDING PAGE
@@ -121,57 +122,137 @@ section{
     p{
         font-family:$sansSerifFont;
         color:$black;
+        text-align: center;
     }
     .devicon{
         color:rgba($black, $alpha: 0.7);
         font-size:clamp(2rem, 10vw, 4rem);
+        margin:0 auto;
     }
 
 }
+
+
+// portfolio section
+
 .portfolioSection{
+
     ul{
         list-style:none;
+        padding:0;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
     }
+
     li{
+        width:calc(100% - 50px);
         margin-bottom:30px;
-    }
-}
-// portfolio section
-.portfolioSection.darkTheme{
-    background-color:rgba($black, $alpha: 0.98);
 
-}
-
-.projectContainer{
-    display:flex;
-    position: relative;
-    height:max-content;
-    
-    .projectTool{
-        position: absolute;
-        left:-20px;
-
-        p{
-            background-color:rgba($purple, 1);
-            padding:5px 10px;
-            color:$white;
+        &:nth-child(3n+2){
+            margin:0 auto;
+        }
+        &:nth-child(3n){
+            margin-left:auto;
         }
     }
 
-    .projectImage{
-        flex-basis:50%;
-        background-color:rebeccapurple;
-        border-top-left-radius:20px;
-        border-bottom-left-radius:20px;
-    }
+}
+
+.portfolioSection.darkTheme{
+    background-color:rgba($black, $alpha: 0.98);
+}
+
+// PROJECT CONTAINER LI
+.projectContainer{
+    display:flex;
+    position: relative;
+    border-radius:20px;
+    height:max-content;
+
 
     img{
         width:100%;
+        transition: transform 1s;
     }
+
+
+    .projectImage{
+        border-radius:20px;
+        // flex-basis:30%;
+        overflow:hidden;
+
+
+        &:hover, &:focus{
+            img{
+                transform:scale(1.2);
+            }
+        }
+    }
+
+    .projectInfo.active{
+        display:block;
+        position: absolute;
+        background-color:rgba($black, $alpha:0.5);
+    }
+
+    .projectInfo{
+        display:none;
+    }
+
+    .projectLinks{
+        display:flex;
+        justify-content:space-around;
+        padding:20px;
+        width:50%;
+        margin:0 auto;
+
+        a{
+            background-color:$purple;
+            color:$white;
+            padding:5px 10px;
+            text-decoration:none;
+            transition:background-color 0.3s;
+            border-radius:5px;
+
+            &:hover, &:focus{
+                background-color:maroon;
+            }
+        }
+    }
+
+    
+
+
+}
+
+// PROJECT CONTAINER DARK THEME
+.projectContainer.darkTheme{
     .projectText{
-        flex-basis:50%;
+        background-color:rgba($white, 0.15);
+
+        h3, p{
+            color:$white;
+        }
+    }
+}
+
+.portfolioSection li{
+    &:nth-child(n) .projectImage{
+        background-color:lightcoral;
+    }
+    &:nth-child(2n) .projectImage{
         background-color:lightblue;
-        border-top-right-radius:20px;
-        border-bottom-right-radius:20px;
+    }
+    &:nth-child(3n) .projectImage{
+        background-color:mediumaquamarine;
+    }
+    &:nth-child(4n) .projectImage{
+        background-color:plum;
+    }
+    &:nth-child(5n) .projectImage{
+        background-color:palegoldenrod;
+    }
+    &:nth-child(6n) .projectImage{
+        background-color:lightsalmon;
     }
 }

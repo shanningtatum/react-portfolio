@@ -113,39 +113,39 @@ const projects = [
 
 const toolkit = [
   {
-    img: <i class="devicon-html5-plain devicon"></i>,
+    img: <i className="devicon-html5-plain devicon"></i>,
     tool: "HTML5",
   },
   {
-    img: <i class="devicon-css3-plain devicon"></i>,
+    img: <i className="devicon-css3-plain devicon"></i>,
     tool: "CSS3",
   },
   {
-    img: <i class="devicon-javascript-plain devicon"></i>,
+    img: <i className="devicon-javascript-plain devicon"></i>,
     tool: "JavaScript",
   },
   {
-    img: <i class="devicon-jquery-plain-wordmark devicon"></i>,
+    img: <i className="devicon-jquery-plain-wordmark devicon"></i>,
     tool: "jQuery",
   },
   {
-    img: <i class="devicon-sass-original devicon"></i>,
+    img: <i className="devicon-sass-original devicon"></i>,
     tool: "Sass",
   },
   {
-    img: <i class="devicon-react-original devicon"></i>,
+    img: <i className="devicon-react-original devicon"></i>,
     tool: "React",
   },
   {
-    img: <i class="devicon-git-plain devicon"></i>,
+    img: <i className="devicon-git-plain devicon"></i>,
     tool: "Git",
   },
   {
-    img: <i class="devicon-github-original devicon"></i>,
+    img: <i className="devicon-github-original devicon"></i>,
     tool: "GitHub",
   },
   {
-    img: <i class="devicon-firebase-plain devicon"></i>,
+    img: <i className="devicon-firebase-plain devicon"></i>,
     tool: "Firebase",
   },
   {
@@ -153,11 +153,11 @@ const toolkit = [
     tool: "Accessibility",
   },
   {
-    img: <i class="devicon-photoshop-plain devicon"></i>,
+    img: <i className="devicon-photoshop-plain devicon"></i>,
     tool: "Photoshop",
   },
   {
-    img: <i class="devicon-figma-plain devicon"></i>,
+    img: <i className="devicon-figma-plain devicon"></i>,
     tool: "Figma",
   },
 ];

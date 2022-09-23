@@ -274,6 +274,24 @@ h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
+.projectText h3 {
+  color: #202020;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  padding: 20px;
+}
+
+p {
+  line-height: 1.6rem;
+  font-size: clamp(0.6rem, 4vw, 0.9rem);
+}
+
+.projectText p {
+  color: #51586D;
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+}
+
 .strongName {
   font-size: clamp(1.5rem, 4vw, 2.7rem);
 }
@@ -565,17 +583,29 @@ section:last-child {
 .toolKitSection p {
   font-family: "Inter", sans-serif;
   color: #202020;
+  text-align: center;
 }
 .toolKitSection .devicon {
   color: rgba(32, 32, 32, 0.7);
   font-size: clamp(2rem, 10vw, 4rem);
+  margin: 0 auto;
 }
 
 .portfolioSection ul {
   list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .portfolioSection li {
+  width: calc(100% - 50px);
   margin-bottom: 30px;
+}
+.portfolioSection li:nth-child(3n+2) {
+  margin: 0 auto;
+}
+.portfolioSection li:nth-child(3n) {
+  margin-left: auto;
 }
 
 .portfolioSection.darkTheme {
@@ -585,33 +615,73 @@ section:last-child {
 .projectContainer {
   display: flex;
   position: relative;
+  border-radius: 20px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
-.projectContainer .projectTool {
-  position: absolute;
-  left: -20px;
-}
-.projectContainer .projectTool p {
-  background-color: #a23b72;
-  padding: 5px 10px;
-  color: #FFF;
-}
-.projectContainer .projectImage {
-  flex-basis: 50%;
-  background-color: rebeccapurple;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
 .projectContainer img {
   width: 100%;
+  transition: transform 1s;
 }
-.projectContainer .projectText {
-  flex-basis: 50%;
+.projectContainer .projectImage {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projectContainer .projectImage:hover img, .projectContainer .projectImage:focus img {
+  transform: scale(1.2);
+}
+.projectContainer .projectInfo.active {
+  display: block;
+  position: absolute;
+  background-color: rgba(32, 32, 32, 0.5);
+}
+.projectContainer .projectInfo {
+  display: none;
+}
+.projectContainer .projectLinks {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+.projectContainer .projectLinks a {
+  background-color: #A23B72;
+  color: #FFF;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+.projectContainer .projectLinks a:hover, .projectContainer .projectLinks a:focus {
+  background-color: maroon;
+}
+
+.projectContainer.darkTheme .projectText {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.projectContainer.darkTheme .projectText h3, .projectContainer.darkTheme .projectText p {
+  color: #FFF;
+}
+
+.portfolioSection li:nth-child(n) .projectImage {
+  background-color: lightcoral;
+}
+.portfolioSection li:nth-child(2n) .projectImage {
   background-color: lightblue;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+}
+.portfolioSection li:nth-child(3n) .projectImage {
+  background-color: mediumaquamarine;
+}
+.portfolioSection li:nth-child(4n) .projectImage {
+  background-color: plum;
+}
+.portfolioSection li:nth-child(5n) .projectImage {
+  background-color: palegoldenrod;
+}
+.portfolioSection li:nth-child(6n) .projectImage {
+  background-color: lightsalmon;
 }
 
 footer {
@@ -633,7 +703,7 @@ footer a:hover, footer a:focus {
   color: #A23B72;
 }
 
-h3 {
+footer h3 {
   color: #51586D;
   font-weight: normal;
   font-size: clamp(0.6rem, 2vw, 0.8rem);

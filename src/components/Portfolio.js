@@ -1,9 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { projects } from "./toolkit";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Portfolio() {
   const { darkMode } = useContext(DarkModeContext);
+  const [displayInfo, setDisplayInfo] = useState(false);
+
+  const moreInfo = (e) => {
+    console.log(e.target.nextSibling);
+    const targetSibling = e.target.parentElement;
+    targetSibling.classList.toggle("active");
+  };
+
+  const closeInfo = (e) => {
+    const targetParent = e.target.parentElement;
+    targetParent.classList.toggle("active");
+  };
   return (
     <section
       id="portfolio"
@@ -12,7 +24,7 @@ function Portfolio() {
       <div className="wrapper">
         <h2>Portfolio</h2>
         <ul>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const projectTools = [];
             const toolUsed = project.tool;
 
@@ -22,21 +34,31 @@ function Portfolio() {
             }
 
             return (
-              <li>
-                <div className="projectContainer">
-                  <div className="projectTool">
-                    {projectTools.map((tool) => {
-                      return <p>{tool}</p>;
-                    })}
-                  </div>
-                  <div className="projectImage">
+              <li key={index}>
+                <div
+                  className={
+                    darkMode ? "projectContainer darkTheme" : "projectContainer"
+                  }
+                >
+                  <div
+                    className="projectImage"
+                    onClick={(e) => {
+                      moreInfo(e);
+                    }}
+                  >
                     <img
                       src={project.img}
                       alt={`Device mockup image of ${project.name} project.`}
                     />
-                  </div>
-                  <div className="projectText">
-                    <h3>{project.name}</h3>
+                    <div
+                      className={
+                        displayInfo ? "projectInfo active" : "projectInfo"
+                      }
+                    >
+                      <p onClick={(e) => closeInfo(e)}>X</p>
+                      <h3>{project.name}</h3>
+                      <p>{project.desc}</p>
+                    </div>
                   </div>
                 </div>
               </li>

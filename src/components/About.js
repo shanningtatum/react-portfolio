@@ -13,11 +13,11 @@ function About() {
         <div className="aboutMeSection">
           <h2>About Me</h2>
           <p>
-            I'm a front-end developer with years of experience as a digital
-            artist, supervisor, and a customer service rep. My education
-            background in the social services makes inclusion and diversity a
-            priority for me and allows me to see things from another perspective
-            - the user perspective.
+            I'm a front-end developer with experience as a digital artist,
+            supervisor, and a customer service rep. My education background in
+            the social services makes inclusion and diversity a priority for me
+            and allows me to see things from another perspective - the user
+            perspective.
           </p>
           <p>
             My experience as a digital artist makes me sweat the small stuff,
@@ -42,9 +42,12 @@ function About() {
         >
           <h2>My Toolkit</h2>
           <ul>
-            {toolkit.map((tool) => {
+            {toolkit.map((tool, index) => {
               return (
-                <li className={darkMode ? "toolList darkTheme" : "toolList"}>
+                <li
+                  key={index}
+                  className={darkMode ? "toolList darkTheme" : "toolList"}
+                >
                   {tool.img}
                   <p>{tool.tool}</p>
                 </li>
