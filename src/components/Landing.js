@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Landing() {
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
     <section
       className={darkMode ? "landingSection darkTheme" : "landingSection"}

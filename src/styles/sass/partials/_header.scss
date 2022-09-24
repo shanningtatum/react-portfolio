@@ -5,6 +5,21 @@ header{
     border-right:1px $purple solid;
     font-family:$serifFont;
 
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        height:100%;
+    }
+
+    .logo {
+        text-align: center;
+        a{
+            font-size:clamp(0.9rem, 4vw, 1.2rem);
+            text-decoration:none;
+        }
+    }
+
     nav{
         height:50vh;
 
@@ -39,9 +54,12 @@ header{
         display:flex;
         flex-direction:column;
         padding:0;
-        justify-content:space-evenly;
         width:100%;
         height:100%;
+    }
+
+    li{
+        margin-bottom:30px;
     }
 
 }
@@ -78,11 +96,64 @@ header{
 .skipLink{
     border:2px red solid;
     position: absolute;
-    top:5px;
+    background-color:$white;
+    top:0;
     left:-1000px;
 
     &:focus{
         display:block;
         left:0px;
+    }
+}
+
+// toggle button
+
+.themeContainer{
+    background-color:$black;
+    border-radius:30px;
+    width:100px;
+    margin:0 auto;
+    height:30px;
+    display:flex;
+    padding:5px;
+    position: relative;
+
+    .themeButton{
+        background-color:orange;
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        border:none;
+        position: relative;
+        overflow:hidden;
+        transition: transform 0.5s;
+        padding:0;
+        overflow:auto;
+        cursor:pointer;
+        &::before{
+            content:'';
+            position:absolute;
+            background-color:$white;
+            width:100%;
+            height:100%;
+            border-radius:50%;
+            left:-60%;
+            top:0;
+            transform:scale(0);
+
+        }
+    }
+
+}
+
+.themeContainer.darkTheme{
+    background-color:$white !important;
+    .themeButton{
+        transform:translateX(calc(100px - 30px));
+
+        &::before{
+            left:-10px;
+            transform:scale(1);
+        }
     }
 }

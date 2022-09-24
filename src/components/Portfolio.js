@@ -7,8 +7,7 @@ function Portfolio() {
   const [displayInfo, setDisplayInfo] = useState(false);
 
   const moreInfo = (e) => {
-    console.log(e.target.nextSibling);
-    const targetSibling = e.target.parentElement;
+    const targetSibling = e.target.nextSibling;
     targetSibling.classList.toggle("active");
   };
 

@@ -222,13 +222,13 @@ template {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(10px);
   }
   60% {
     transform: translateY(0);
   }
   90% {
-    transform: translateY(50px);
+    transform: translateY(10px);
   }
   100% {
     transform: translateY(0);
@@ -240,13 +240,13 @@ template {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(10px);
   }
   60% {
     transform: translateY(0);
   }
   90% {
-    transform: translateY(50px);
+    transform: translateY(10px);
   }
   100% {
     transform: translateY(0);
@@ -322,6 +322,19 @@ header {
   border-right: 1px #A23B72 solid;
   font-family: "Playfair Display", serif;
 }
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+header .logo {
+  text-align: center;
+}
+header .logo a {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  text-decoration: none;
+}
 header nav {
   height: 50vh;
 }
@@ -351,9 +364,11 @@ header ul {
   display: flex;
   flex-direction: column;
   padding: 0;
-  justify-content: space-evenly;
   width: 100%;
   height: 100%;
+}
+header li {
+  margin-bottom: 30px;
 }
 
 .headerDark {
@@ -382,12 +397,59 @@ header ul {
 .skipLink {
   border: 2px red solid;
   position: absolute;
-  top: 5px;
+  background-color: #FFF;
+  top: 0;
   left: -1000px;
 }
 .skipLink:focus {
   display: block;
   left: 0px;
+}
+
+.themeContainer {
+  background-color: #202020;
+  border-radius: 30px;
+  width: 100px;
+  margin: 0 auto;
+  height: 30px;
+  display: flex;
+  padding: 5px;
+  position: relative;
+}
+.themeContainer .themeButton {
+  background-color: orange;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+  padding: 0;
+  overflow: auto;
+  cursor: pointer;
+}
+.themeContainer .themeButton::before {
+  content: "";
+  position: absolute;
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: -60%;
+  top: 0;
+  transform: scale(0);
+}
+
+.themeContainer.darkTheme {
+  background-color: #FFF !important;
+}
+.themeContainer.darkTheme .themeButton {
+  transform: translateX(70px);
+}
+.themeContainer.darkTheme .themeButton::before {
+  left: -10px;
+  transform: scale(1);
 }
 
 .landingSection .wrapper {
@@ -453,8 +515,6 @@ header ul {
   height: 60px;
   border-radius: 40px;
   position: relative;
-  -webkit-animation: scrollDown 3s infinite;
-          animation: scrollDown 3s infinite;
 }
 .scrollIcon .mouseImage::after {
   content: "";
@@ -463,14 +523,16 @@ header ul {
   top: 5px;
   width: 2px;
   height: 20px;
-  background-color: #202020;
+  background-color: #A23B72;
   border-radius: 20px;
+  -webkit-animation: scrollDown 3s infinite;
+          animation: scrollDown 3s infinite;
 }
 .scrollIcon .mouseImageDark {
   border: 2px #FFF solid;
 }
 .scrollIcon .mouseImageDark::after {
-  background-color: #FFF;
+  background-color: #FCB0D8;
 }
 .scrollIcon .circleBackground {
   margin: 0 auto;
@@ -594,18 +656,10 @@ section:last-child {
 .portfolioSection ul {
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 .portfolioSection li {
-  width: calc(100% - 50px);
   margin-bottom: 30px;
-}
-.portfolioSection li:nth-child(3n+2) {
-  margin: 0 auto;
-}
-.portfolioSection li:nth-child(3n) {
-  margin-left: auto;
+  border-radius: 20px;
 }
 
 .portfolioSection.darkTheme {
@@ -616,16 +670,16 @@ section:last-child {
   display: flex;
   position: relative;
   border-radius: 20px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
 }
 .projectContainer img {
   width: 100%;
   transition: transform 1s;
 }
 .projectContainer .projectImage {
+  align-items: center;
   border-radius: 20px;
+  height: 100%;
   overflow: hidden;
 }
 .projectContainer .projectImage:hover img, .projectContainer .projectImage:focus img {
@@ -634,10 +688,14 @@ section:last-child {
 .projectContainer .projectInfo.active {
   display: block;
   position: absolute;
+  top: 0;
   background-color: rgba(32, 32, 32, 0.5);
 }
 .projectContainer .projectInfo {
   display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 .projectContainer .projectLinks {
   display: flex;

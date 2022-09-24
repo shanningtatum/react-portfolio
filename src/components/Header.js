@@ -9,12 +9,9 @@ function Header() {
         Skip to Main Content
       </a>
       <div className="wrapper">
-        <button onClick={toggleDarkMode}>
-          {darkMode ? "🌞" : "🌛"}
-          <span className="sr-only">
-            {darkMode ? "Enable light mode" : "Enable dark mode"}
-          </span>
-        </button>
+        <div className="logo">
+          <a href="#">[ST]</a>
+        </div>
         <nav className="navBar">
           <ul>
             <li>
@@ -31,6 +28,15 @@ function Header() {
             </li>
           </ul>
         </nav>
+        <div
+          className={darkMode ? "themeContainer darkTheme" : "themeContainer"}
+        >
+          <button className="themeButton" onClick={toggleDarkMode}>
+            <span className="sr-only">
+              {darkMode ? "Enable light mode" : "Enable dark mode"}
+            </span>
+          </button>
+        </div>
       </div>
     </header>
   );
