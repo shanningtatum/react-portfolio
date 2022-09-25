@@ -11,10 +11,6 @@ function Portfolio() {
     targetSibling.classList.toggle("active");
   };
 
-  const closeInfo = (e) => {
-    const targetParent = e.target.parentElement;
-    targetParent.classList.toggle("active");
-  };
   return (
     <section
       id="portfolio"
@@ -22,7 +18,7 @@ function Portfolio() {
     >
       <div className="wrapper">
         <h2>Portfolio</h2>
-        <ul>
+        <ul className="projectList">
           {projects.map((project, index) => {
             const projectTools = [];
             const toolUsed = project.tool;
@@ -49,14 +45,26 @@ function Portfolio() {
                       src={project.img}
                       alt={`Device mockup image of ${project.name} project.`}
                     />
-                    <div
-                      className={
-                        displayInfo ? "projectInfo active" : "projectInfo"
-                      }
-                    >
-                      <p onClick={(e) => closeInfo(e)}>X</p>
-                      <h3>{project.name}</h3>
-                      <p>{project.desc}</p>
+                  </div>
+                  <div className="projectInfo">
+                    <h3>{project.name}</h3>
+                    <p>{project.desc}</p>
+                    <div className="projectLinks">
+                      <a href={project.live}>LIVE</a>
+
+                      <a href={project.github}>GITHUB</a>
+                    </div>
+                    <div className="projectTools">
+                      <ul>
+                        {projectTools.map((tool) => {
+                          console.log(tool);
+                          return (
+                            <li>
+                              <p>{tool}</p>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </div>
                   </div>
                 </div>

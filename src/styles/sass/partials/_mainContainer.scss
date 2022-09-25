@@ -137,18 +137,43 @@ section{
 
 .portfolioSection{
 
-    ul{
-
+    .projectList{
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-rows:repeat(3, 1fr);
+        gap:3rem;
         list-style:none;
         padding:0;
-
     }
 
     li{
-        
         margin-bottom:30px;
         border-radius:20px;
+        transition:transform 0.3s;
 
+        &:hover, &:focus{
+            transform:scale(1.2);
+
+            .projectInfo{
+                animation:projectHover 1s forwards;
+            }
+            .projectInfo h3{
+                animation:projectHoverText 1s forwards;
+            }
+            .projectInfo > p{
+                animation:projectHoverText 1s forwards 0.2s;
+            }
+
+            .projectLinks{
+                animation:projectHoverText 1s forwards 0.4s;
+            }
+            .projectTools{
+                animation:projectHoverText 1s forwards 0.6s;
+
+            }
+            
+
+        }
     }
 
 }
@@ -160,9 +185,12 @@ section{
 // PROJECT CONTAINER LI
 .projectContainer{
     display:flex;
+    flex-direction:column;
     position: relative;
     border-radius:20px;
     height:100%;
+    overflow:hidden;
+
 
     img{
         width:100%;
@@ -172,50 +200,76 @@ section{
     .projectImage{
         align-items: center;
         border-radius:20px;
-        // flex-basis:30%;
         height:100%;
         overflow:hidden;
 
-
-
-        &:hover, &:focus{
-            img{
-                transform:scale(1.2);
-            }
-        }
-    }
-
-    .projectInfo.active{
-        display:block;
-        position: absolute;
-        top:0;
-        background-color:rgba($black, $alpha:0.5);
     }
 
     .projectInfo{
-        display:none;
+        position: absolute;
+        transform:translateY(500px);
+        background-color:rgba($black, $alpha: 0.8);
         width:100%;
         height:100%;
         border-radius:20px;
+        color:$white;
+        padding:20px;
+
+
+        h3{
+            font-size:clamp(0.5rem, 2vw, 1rem);
+            font-family:$serifFont;
+            font-weight:normal;
+            text-align: center;
+            margin:10px 0;
+        }
+
+        p{
+            font-size:clamp(0.4rem, 2vw, 0.7rem);
+            font-family:$sansSerifFont;
+            text-align: center;
+            margin:0;
+            line-height:1rem;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+            display:flex;
+            flex-wrap:wrap;
+            margin:0 auto;
+            justify-content: space-between;
+        }
+        li{
+            margin:0 auto;
+
+            p{
+                color:$white;
+            }
+        }
+
+
     }
 
     .projectLinks{
         display:flex;
         justify-content:space-around;
-        padding:20px;
-        width:50%;
+        padding:15px 0;
+        width:100%;
         margin:0 auto;
+        
 
         a{
-            background-color:$purple;
+            font-size:clamp(0.4rem, 2vw, 0.7rem);
             color:$white;
             padding:5px 10px;
             text-decoration:none;
-            transition:background-color 0.3s;
-            border-radius:5px;
+            transition:background-color 0.3s, border 0.3s;
+            border:2px solid $white;
 
             &:hover, &:focus{
-                background-color:maroon;
+                background-color:$purple;
+                border:2px solid $purple;
             }
         }
     }
@@ -236,24 +290,24 @@ section{
     }
 }
 
-.portfolioSection li{
-    &:nth-child(n) .projectImage{
+.projectContainer{
+    &:nth-child(n){
         background-color:lightcoral;
     }
-    &:nth-child(2n) .projectImage{
+    &:nth-child(2n){
         background-color:lightblue;
     }
 
-    &:nth-child(3n) .projectImage{
+    &:nth-child(3n){
         background-color:mediumaquamarine;
     }
-    &:nth-child(4n) .projectImage{
+    &:nth-child(4n){
         background-color:plum;
     }
-    &:nth-child(5n) .projectImage{
+    &:nth-child(5n){
         background-color:palegoldenrod;
     }
-    &:nth-child(6n) .projectImage{
+    &:nth-child(6n){
         background-color:lightsalmon;
     }
 }
