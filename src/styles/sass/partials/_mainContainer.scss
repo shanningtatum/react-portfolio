@@ -92,6 +92,22 @@ section{
     flex-basis:50%;
     width:80%;
     margin:auto;
+
+    p{
+        position: relative;
+
+        &:nth-child(3){
+            &:after{
+                content:'(I notice it!)';
+                font-size:0.6rem;
+                position: absolute;
+                top:-10px;
+                font-style:italic;
+                color:$white;
+            }
+        }
+    }
+
 }
 
 .toolKitSection{
@@ -146,7 +162,7 @@ section{
         padding:0;
     }
 
-    li{
+    .projectLi{
         margin-bottom:30px;
         border-radius:20px;
         transition:transform 0.3s;
@@ -206,6 +222,9 @@ section{
     }
 
     .projectInfo{
+        display:flex;
+    flex-direction: column; 
+        justify-content: space-evenly;
         position: absolute;
         transform:translateY(500px);
         background-color:rgba($black, $alpha: 0.8);
@@ -290,24 +309,24 @@ section{
     }
 }
 
-.projectContainer{
-    &:nth-child(n){
+.projectLi{
+    &:nth-child(6n + 1){
         background-color:lightcoral;
     }
-    &:nth-child(2n){
+    &:nth-child(6n + 2){
         background-color:lightblue;
     }
 
-    &:nth-child(3n){
+    &:nth-child(6n + 3){
         background-color:mediumaquamarine;
     }
-    &:nth-child(4n){
-        background-color:plum;
+    &:nth-child(6n + 4){
+        background-color:plum;  
     }
-    &:nth-child(5n){
+    &:nth-child(6n + 5){
         background-color:palegoldenrod;
     }
-    &:nth-child(6n){
+    &:nth-child(6n + 6){
         background-color:lightsalmon;
     }
 }

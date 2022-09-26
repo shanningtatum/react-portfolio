@@ -1,0 +1,96 @@
+.contactSection{
+
+    .contactHeader{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;;
+        flex-basis:70%;
+        border-bottom:1px $pink solid;
+
+    }
+
+    .contactSocial{
+        flex-basis:30%;
+        ul{
+            list-style:none;
+            justify-content:space-evenly;
+            display:flex;
+            align-items:center;
+            padding:0;
+        }
+
+        a{
+            color:$white;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            transition:color 0.3s;
+
+            &:hover, &:focus{
+                color:$purple;
+            }
+        }
+    }
+    
+    .contactForm{
+        display:flex;
+        font-family:$sansSerifFont;
+
+        form{
+            display:flex;
+            flex-direction:column;
+            flex-basis:60%;
+        }
+        fieldset{
+            border:none;
+            padding:0;
+        }
+
+        ul{
+            padding:0;
+            list-style:none;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+        }
+        li{
+            display:flex;
+            flex-direction:column;
+            width:calc((100% / 2) - 20px);
+        }
+        label{
+            margin:10px 0;
+        }
+        input{
+            background-color:transparent;
+            border-radius:5px;
+            border:1px rgba($white, $alpha:0.5) solid;
+            padding:10px;
+            color:$white;
+            font-family:$sansSerifFont;
+
+            &::placeholder{
+                font-family:$sansSerifFont;
+                color:rgba($white, $alpha:0.5);
+            }
+        }
+        textarea{
+            background-color:transparent;
+            padding:10px;
+            border:1px rgba($white, $alpha:0.5) solid;
+            border-radius:5px;
+            color:rgba($white, $alpha:0.5);
+
+
+        }
+
+        .contactInfo{
+            padding:0 20px;
+            flex-basis:40%;
+        }
+
+        h3{
+            font-family:$serifFont;
+            font-weight:normal;
+        }
+    }
+
+}

@@ -369,11 +369,18 @@ header .wrapper {
   height: 100%;
 }
 header .logo {
+  border: 2px #FFF solid;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+  margin: 0 auto;
   text-align: center;
 }
 header .logo a {
   font-size: clamp(0.9rem, 4vw, 1.2rem);
   text-decoration: none;
+  transition: color 0.3s;
 }
 header nav {
   height: 50vh;
@@ -656,6 +663,17 @@ section:last-child {
   width: 80%;
   margin: auto;
 }
+.aboutMeSection p {
+  position: relative;
+}
+.aboutMeSection p:nth-child(3):after {
+  content: "(I notice it!)";
+  font-size: 0.6rem;
+  position: absolute;
+  top: -10px;
+  font-style: italic;
+  color: #FFF;
+}
 
 .toolKitSection {
   flex-basis: 50%;
@@ -701,31 +719,31 @@ section:last-child {
   list-style: none;
   padding: 0;
 }
-.portfolioSection li {
+.portfolioSection .projectLi {
   margin-bottom: 30px;
   border-radius: 20px;
   transition: transform 0.3s;
 }
-.portfolioSection li:hover, .portfolioSection li:focus {
+.portfolioSection .projectLi:hover, .portfolioSection .projectLi:focus {
   transform: scale(1.2);
 }
-.portfolioSection li:hover .projectInfo, .portfolioSection li:focus .projectInfo {
+.portfolioSection .projectLi:hover .projectInfo, .portfolioSection .projectLi:focus .projectInfo {
   -webkit-animation: projectHover 1s forwards;
           animation: projectHover 1s forwards;
 }
-.portfolioSection li:hover .projectInfo h3, .portfolioSection li:focus .projectInfo h3 {
+.portfolioSection .projectLi:hover .projectInfo h3, .portfolioSection .projectLi:focus .projectInfo h3 {
   -webkit-animation: projectHoverText 1s forwards;
           animation: projectHoverText 1s forwards;
 }
-.portfolioSection li:hover .projectInfo > p, .portfolioSection li:focus .projectInfo > p {
+.portfolioSection .projectLi:hover .projectInfo > p, .portfolioSection .projectLi:focus .projectInfo > p {
   -webkit-animation: projectHoverText 1s forwards 0.2s;
           animation: projectHoverText 1s forwards 0.2s;
 }
-.portfolioSection li:hover .projectLinks, .portfolioSection li:focus .projectLinks {
+.portfolioSection .projectLi:hover .projectLinks, .portfolioSection .projectLi:focus .projectLinks {
   -webkit-animation: projectHoverText 1s forwards 0.4s;
           animation: projectHoverText 1s forwards 0.4s;
 }
-.portfolioSection li:hover .projectTools, .portfolioSection li:focus .projectTools {
+.portfolioSection .projectLi:hover .projectTools, .portfolioSection .projectLi:focus .projectTools {
   -webkit-animation: projectHoverText 1s forwards 0.6s;
           animation: projectHoverText 1s forwards 0.6s;
 }
@@ -753,6 +771,9 @@ section:last-child {
   overflow: hidden;
 }
 .projectContainer .projectInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: absolute;
   transform: translateY(500px);
   background-color: rgba(32, 32, 32, 0.8);
@@ -817,23 +838,112 @@ section:last-child {
   color: #FFF;
 }
 
-.projectContainer:nth-child(n) {
+.projectLi:nth-child(6n+1) {
   background-color: lightcoral;
 }
-.projectContainer:nth-child(2n) {
+.projectLi:nth-child(6n+2) {
   background-color: lightblue;
 }
-.projectContainer:nth-child(3n) {
+.projectLi:nth-child(6n+3) {
   background-color: mediumaquamarine;
 }
-.projectContainer:nth-child(4n) {
+.projectLi:nth-child(6n+4) {
   background-color: plum;
 }
-.projectContainer:nth-child(5n) {
+.projectLi:nth-child(6n+5) {
   background-color: palegoldenrod;
 }
-.projectContainer:nth-child(6n) {
+.projectLi:nth-child(6n+6) {
   background-color: lightsalmon;
+}
+
+.contactSection .contactHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 70%;
+  border-bottom: 1px #FCB0D8 solid;
+}
+.contactSection .contactSocial {
+  flex-basis: 30%;
+}
+.contactSection .contactSocial ul {
+  list-style: none;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.contactSection .contactSocial a {
+  color: #FFF;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  transition: color 0.3s;
+}
+.contactSection .contactSocial a:hover, .contactSection .contactSocial a:focus {
+  color: #A23B72;
+}
+.contactSection .contactForm {
+  display: flex;
+  font-family: "Inter", sans-serif;
+}
+.contactSection .contactForm form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 60%;
+}
+.contactSection .contactForm fieldset {
+  border: none;
+  padding: 0;
+}
+.contactSection .contactForm ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contactSection .contactForm li {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 20px);
+}
+.contactSection .contactForm label {
+  margin: 10px 0;
+}
+.contactSection .contactForm input {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  padding: 10px;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+}
+.contactSection .contactForm input::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm input:-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm input::placeholder {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm textarea {
+  background-color: transparent;
+  padding: 10px;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm .contactInfo {
+  padding: 0 20px;
+  flex-basis: 40%;
+}
+.contactSection .contactForm h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
 }
 
 footer {

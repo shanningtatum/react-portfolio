@@ -21,8 +21,7 @@ function About() {
           </p>
           <p>
             My experience as a digital artist makes me sweat the small stuff,
-            the tiny pixels that folks don't notice &nbsp;
-            <span className="tinyFont">(I notice it!)</span>.
+            the tiny pixels that folks don't notice. &nbsp;
           </p>
           <p>
             I enjoy the unique challenges that coding requires and being able to

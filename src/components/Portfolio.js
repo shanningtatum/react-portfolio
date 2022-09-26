@@ -29,12 +29,8 @@ function Portfolio() {
             }
 
             return (
-              <li key={index}>
-                <div
-                  className={
-                    darkMode ? "projectContainer darkTheme" : "projectContainer"
-                  }
-                >
+              <li key={index} tabIndex="0" className="projectLi">
+                <div className="projectContainer">
                   <div
                     className="projectImage"
                     onClick={(e) => {
@@ -51,7 +47,6 @@ function Portfolio() {
                     <p>{project.desc}</p>
                     <div className="projectLinks">
                       <a href={project.live}>LIVE</a>
-
                       <a href={project.github}>GITHUB</a>
                     </div>
                     <div className="projectTools">

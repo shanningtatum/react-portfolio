@@ -10,7 +10,7 @@ function Header() {
       </a>
       <div className="wrapper">
         <div className="logo">
-          <a href="#">[ST]</a>
+          <a href="#">ST</a>
         </div>
         <nav className="navBar">
           <ul>

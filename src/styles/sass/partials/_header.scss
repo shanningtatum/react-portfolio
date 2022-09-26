@@ -13,10 +13,16 @@ header{
     }
 
     .logo {
+        border:2px $white solid;
+        width:max-content;
+        padding:5px;
+        margin:0 auto;
         text-align: center;
+
         a{
             font-size:clamp(0.9rem, 4vw, 1.2rem);
             text-decoration:none;
+            transition:color 0.3s;
         }
     }
 
