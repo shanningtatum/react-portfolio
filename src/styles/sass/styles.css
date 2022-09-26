@@ -357,7 +357,7 @@ p {
 
 header {
   position: fixed;
-  height: 90vh;
+  height: 85vh;
   width: 15%;
   border-right: 1px #A23B72 solid;
   font-family: "Playfair Display", serif;
@@ -420,6 +420,7 @@ header li {
 
 .headerDark {
   background-color: #202020;
+  border-right: 1px #FCB0D8 solid;
 }
 .headerDark a {
   color: #FFF;
@@ -575,21 +576,25 @@ header li {
   -webkit-animation: scrollDown 3s infinite;
           animation: scrollDown 3s infinite;
 }
+.scrollIcon .mouseImage::before {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  top: 30px;
+  left: -35%;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(162, 59, 114, 0.4);
+}
 .scrollIcon .mouseImageDark {
   border: 2px #FFF solid;
 }
 .scrollIcon .mouseImageDark::after {
   background-color: #FCB0D8;
 }
-.scrollIcon .circleBackground {
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(162, 59, 114, 0.4);
-}
-.scrollIcon .circleBackgroundDark {
-  background-color: rgba(252, 176, 216, 0.5);
+.scrollIcon .mouseImageDark::before {
+  background-color: rgba(252, 176, 216, 0.4);
 }
 
 main {
@@ -728,24 +733,24 @@ section:last-child {
   transform: scale(1.2);
 }
 .portfolioSection .projectLi:hover .projectInfo, .portfolioSection .projectLi:focus .projectInfo {
-  -webkit-animation: projectHover 1s forwards;
-          animation: projectHover 1s forwards;
+  -webkit-animation: projectHover 0.8s forwards;
+          animation: projectHover 0.8s forwards;
 }
 .portfolioSection .projectLi:hover .projectInfo h3, .portfolioSection .projectLi:focus .projectInfo h3 {
-  -webkit-animation: projectHoverText 1s forwards;
-          animation: projectHoverText 1s forwards;
+  -webkit-animation: projectHoverText 1.2s forwards;
+          animation: projectHoverText 1.2s forwards;
 }
 .portfolioSection .projectLi:hover .projectInfo > p, .portfolioSection .projectLi:focus .projectInfo > p {
-  -webkit-animation: projectHoverText 1s forwards 0.2s;
-          animation: projectHoverText 1s forwards 0.2s;
+  -webkit-animation: projectHoverText 1.2s forwards 0.1s;
+          animation: projectHoverText 1.2s forwards 0.1s;
 }
 .portfolioSection .projectLi:hover .projectLinks, .portfolioSection .projectLi:focus .projectLinks {
-  -webkit-animation: projectHoverText 1s forwards 0.4s;
-          animation: projectHoverText 1s forwards 0.4s;
+  -webkit-animation: projectHoverText 1.2s forwards 0.2s;
+          animation: projectHoverText 1.2s forwards 0.2s;
 }
 .portfolioSection .projectLi:hover .projectTools, .portfolioSection .projectLi:focus .projectTools {
-  -webkit-animation: projectHoverText 1s forwards 0.6s;
-          animation: projectHoverText 1s forwards 0.6s;
+  -webkit-animation: projectHoverText 1.2s forwards 0.3s;
+          animation: projectHoverText 1.2s forwards 0.3s;
 }
 
 .portfolioSection.darkTheme {
@@ -811,6 +816,9 @@ section:last-child {
 .projectContainer .projectInfo li p {
   color: #FFF;
 }
+.projectContainer .projectInfo .projectTools {
+  opacity: 0;
+}
 .projectContainer .projectLinks {
   display: flex;
   justify-content: space-around;
@@ -857,12 +865,15 @@ section:last-child {
   background-color: lightsalmon;
 }
 
+.contactSection .wrapper {
+  margin: 20px auto;
+}
 .contactSection .contactHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-basis: 70%;
-  border-bottom: 1px #FCB0D8 solid;
+  border-bottom: 1px #51586D solid;
 }
 .contactSection .contactSocial {
   flex-basis: 30%;
@@ -908,7 +919,9 @@ section:last-child {
   width: calc(50% - 20px);
 }
 .contactSection .contactForm label {
-  margin: 10px 0;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .contactSection .contactForm input {
   background-color: transparent;
@@ -935,7 +948,31 @@ section:last-child {
   padding: 10px;
   border: 1px rgba(255, 255, 255, 0.5) solid;
   border-radius: 5px;
+  color: #FFF;
+}
+.contactSection .contactForm textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contactSection .contactForm .submitButton {
+  width: calc(50% - 20px);
+  margin: 40px 0;
+  background-color: #A23B72;
+  color: #FFF;
+  border: none;
+  padding: 30px 20px;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.contactSection .contactForm .submitButton:hover, .contactSection .contactForm .submitButton:focus {
+  background-color: rgba(162, 59, 114, 0.7);
 }
 .contactSection .contactForm .contactInfo {
   padding: 0 20px;
@@ -949,10 +986,10 @@ section:last-child {
 footer {
   position: fixed;
   bottom: 0;
-  height: 10vh;
+  height: 15vh;
   width: 15%;
   border-right: 1px #A23B72 solid;
-  background-color: #FFF;
+  background-color: red;
   text-align: center;
   font-family: "Playfair Display", serif;
 }
@@ -969,19 +1006,18 @@ footer h3 {
   color: #51586D;
   font-weight: normal;
   font-size: clamp(0.6rem, 2vw, 0.8rem);
-  white-space: nowrap;
 }
 
 .footerDark {
   background-color: #202020;
   color: #FFF;
+  border-right: 1px #FCB0D8 solid;
 }
 .footerDark h3 {
   color: #FFF;
 }
 
 .footerLight {
-  background-color: #FFF;
   color: #202020;
 }
 .footerLight a {
@@ -991,4 +1027,68 @@ footer h3 {
 }
 .footerLight a:hover, .footerLight a:focus {
   color: #A23B72;
+}
+
+@media (max-width: 1300px) {
+  .portfolioSection .projectList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 810px) {
+  header {
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+  }
+  header .wrapper {
+    flex-direction: column;
+    max-width: none;
+    width: 100%;
+  }
+  header .logo {
+    padding: 0%;
+    width: 0;
+  }
+  header nav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 5vh;
+    height: 40vh;
+    background-color: #FFF;
+    z-index: 99999999;
+    border: 2px red solid;
+  }
+  header .hamburger {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+  }
+  header .hamburger .lineOne, header .hamburger .lineTwo, header .hamburger .lineThree {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: #202020;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  header .hamburger .lineTwo {
+    top: 12px;
+  }
+  header .hamburger .lineThree {
+    top: 24px;
+  }
+  header .hamburger:hover .lineOne, header .hamburger:hover .lineTwo, header .hamburger:hover .lineThree, header .hamburger:focus .lineOne, header .hamburger:focus .lineTwo, header .hamburger:focus .lineThree {
+    background-color: #A23B72;
+  }
+  header .themeContainer {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

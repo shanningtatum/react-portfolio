@@ -52,7 +52,6 @@ function Portfolio() {
                     <div className="projectTools">
                       <ul>
                         {projectTools.map((tool) => {
-                          console.log(tool);
                           return (
                             <li>
                               <p>{tool}</p>

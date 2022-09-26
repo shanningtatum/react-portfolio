@@ -1,6 +1,6 @@
 header{
     position: fixed;
-    height:90vh;
+    height:85vh;
     width:15%;
     border-right:1px $purple solid;
     font-family:$serifFont;
@@ -24,6 +24,7 @@ header{
             text-decoration:none;
             transition:color 0.3s;
         }
+
     }
 
     nav{
@@ -72,6 +73,7 @@ header{
 
 .headerDark{
     background-color:$black;
+    border-right:1px $pink solid;
 
     a{
         color:$white;

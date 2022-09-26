@@ -89,7 +89,9 @@ function Contact() {
               placeholder="Hey Shannon! Love your stuff. Let's set up a time to chat."
               required
             ></textarea>
-            <button className="submitButton">Submit Now</button>
+            <button className="submitButton" title="Send your message">
+              Submit Now
+            </button>
           </form>
           <div className="contactInfo">
             <h3>Want To Connect?</h3>

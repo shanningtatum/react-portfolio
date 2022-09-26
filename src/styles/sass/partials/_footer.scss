@@ -1,12 +1,13 @@
 footer{
     position: fixed;
     bottom:0;
-    height:10vh;
+    height:15vh;
     width:15%;
     border-right:1px $purple solid;
-    background-color:$white;
+    background-color:red;
     text-align: center;
     font-family:$serifFont;
+
 
     a{
         color:$pink;
@@ -23,7 +24,6 @@ footer h3{
     color:$grey;
     font-weight:normal;
     font-size:clamp(0.6rem, 2vw, 0.8rem);
-    white-space: nowrap;
 }
 
 
@@ -31,6 +31,8 @@ footer h3{
 .footerDark{
     background-color:$black;
     color:$white;
+    border-right:1px $pink solid;
+
     
     h3{
         color:$white;
@@ -40,7 +42,7 @@ footer h3{
 }
 
 .footerLight{
-    background-color:$white;
+    // background-color:$white;
     color:$black;
 
     a{

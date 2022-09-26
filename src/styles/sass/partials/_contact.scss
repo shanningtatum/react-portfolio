@@ -1,11 +1,13 @@
 .contactSection{
-
+    .wrapper{
+        margin:20px auto;
+    }
     .contactHeader{
         display:flex;
         align-items: center;
         justify-content: space-between;;
         flex-basis:70%;
-        border-bottom:1px $pink solid;
+        border-bottom:1px $grey solid;
 
     }
 
@@ -57,7 +59,9 @@
             width:calc((100% / 2) - 20px);
         }
         label{
-            margin:10px 0;
+            font-size:clamp(0.8rem, 2vw, 1rem);
+            margin-top:10px;
+            margin-bottom:20px;
         }
         input{
             background-color:transparent;
@@ -77,9 +81,29 @@
             padding:10px;
             border:1px rgba($white, $alpha:0.5) solid;
             border-radius:5px;
-            color:rgba($white, $alpha:0.5);
+            color:$white;
 
+            &::placeholder{
+                color:rgba($white, $alpha:0.5);
 
+            }
+        }
+
+        .submitButton{
+            width:calc((100%/2) - 20px);
+            margin:40px 0;
+            background-color:$purple;
+            color:$white;
+            border:none;
+            padding:30px 20px;
+            border-radius:5px;
+            font-family:$sansSerifFont;
+            cursor:pointer;
+            transition:background-color 0.3s, color 0.3s;
+
+            &:hover, &:focus{
+                background-color:rgba($purple, $alpha:0.7);
+            }
         }
 
         .contactInfo{
