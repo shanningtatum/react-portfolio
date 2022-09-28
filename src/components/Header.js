@@ -1,12 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Header() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-
-  const slideOutNav = () => {
-    console.log("hello");
-  };
+  const [toggleNav, setToggleNav] = useState(false);
 
   return (
     <header className={darkMode ? "header headerDark" : "header headerLight"}>
@@ -17,7 +14,7 @@ function Header() {
         <div className="logo">
           <a href="#">ST</a>
         </div>
-        <nav className="navBar">
+        <nav className={toggleNav ? "navBar active" : "navBar"}>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -33,7 +30,12 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className="hamburger" onClick={() => slideOutNav()}>
+        <div
+          className={toggleNav ? "hamburger active" : "hamburger"}
+          onClick={
+            toggleNav ? () => setToggleNav(false) : () => setToggleNav(true)
+          }
+        >
           <span className="lineOne"></span>
           <span className="lineTwo"></span>
           <span className="lineThree"></span>

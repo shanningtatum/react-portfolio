@@ -51,9 +51,9 @@ function Portfolio() {
                     </div>
                     <div className="projectTools">
                       <ul>
-                        {projectTools.map((tool) => {
+                        {projectTools.map((tool, index) => {
                           return (
-                            <li>
+                            <li key={index}>
                               <p>{tool}</p>
                             </li>
                           );

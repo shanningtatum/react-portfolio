@@ -4,7 +4,6 @@ footer{
     height:15vh;
     width:15%;
     border-right:1px $purple solid;
-    background-color:red;
     text-align: center;
     font-family:$serifFont;
 
@@ -23,7 +22,7 @@ footer{
 footer h3{
     color:$grey;
     font-weight:normal;
-    font-size:clamp(0.6rem, 2vw, 0.8rem);
+    font-size:clamp(0.8rem, 2vw, 1rem);
 }
 
 
@@ -42,7 +41,7 @@ footer h3{
 }
 
 .footerLight{
-    // background-color:$white;
+    background-color:$white;
     color:$black;
 
     a{

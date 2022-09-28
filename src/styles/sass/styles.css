@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -668,6 +669,15 @@ section:last-child {
   width: 80%;
   margin: auto;
 }
+.aboutMeSection h2::after {
+  content: "Who are you?";
+  font-family: "Caveat Brush", cursive;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 0.9rem;
+  color: #51586D;
+}
 .aboutMeSection p {
   position: relative;
 }
@@ -694,6 +704,8 @@ section:last-child {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
+  width: 90%;
+  margin: 0 auto;
   padding: 0;
   justify-content: center;
   align-content: center;
@@ -702,7 +714,6 @@ section:last-child {
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 150px;
   margin: 20px auto;
 }
 .toolKitSection p {
@@ -716,6 +727,15 @@ section:last-child {
   margin: 0 auto;
 }
 
+.portfolioSection h2::after {
+  content: "(Click or hover to learn more!)";
+  font-size: 0.9rem;
+  font-family: "Caveat Brush", cursive;
+  color: #51586D;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
 .portfolioSection .projectList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -868,6 +888,15 @@ section:last-child {
 .contactSection .wrapper {
   margin: 20px auto;
 }
+.contactSection h2::after {
+  content: "How can I contact you?";
+  font-size: 0.9rem;
+  font-family: "Caveat Brush", cursive;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+  color: #FCB0D8;
+}
 .contactSection .contactHeader {
   display: flex;
   align-items: center;
@@ -933,14 +962,17 @@ section:last-child {
 }
 .contactSection .contactForm input::-moz-placeholder {
   font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: rgba(255, 255, 255, 0.5);
 }
 .contactSection .contactForm input:-ms-input-placeholder {
   font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: rgba(255, 255, 255, 0.5);
 }
 .contactSection .contactForm input::placeholder {
   font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: rgba(255, 255, 255, 0.5);
 }
 .contactSection .contactForm textarea {
@@ -952,12 +984,15 @@ section:last-child {
 }
 .contactSection .contactForm textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 .contactSection .contactForm textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 .contactSection .contactForm textarea::placeholder {
   color: rgba(255, 255, 255, 0.5);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 .contactSection .contactForm .submitButton {
   width: calc(50% - 20px);
@@ -968,6 +1003,7 @@ section:last-child {
   padding: 30px 20px;
   border-radius: 5px;
   font-family: "Inter", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -977,6 +1013,9 @@ section:last-child {
 .contactSection .contactForm .contactInfo {
   padding: 0 20px;
   flex-basis: 40%;
+}
+.contactSection .contactForm .contactInfo p {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 .contactSection .contactForm h3 {
   font-family: "Playfair Display", serif;
@@ -989,7 +1028,6 @@ footer {
   height: 15vh;
   width: 15%;
   border-right: 1px #A23B72 solid;
-  background-color: red;
   text-align: center;
   font-family: "Playfair Display", serif;
 }
@@ -1005,7 +1043,7 @@ footer a:hover, footer a:focus {
 footer h3 {
   color: #51586D;
   font-weight: normal;
-  font-size: clamp(0.6rem, 2vw, 0.8rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .footerDark {
@@ -1018,6 +1056,7 @@ footer h3 {
 }
 
 .footerLight {
+  background-color: #FFF;
   color: #202020;
 }
 .footerLight a {
@@ -1040,25 +1079,44 @@ footer h3 {
     width: 100%;
     position: fixed;
     z-index: 99999;
+    border-right: none;
   }
   header .wrapper {
     flex-direction: column;
     max-width: none;
     width: 100%;
   }
-  header .logo {
-    padding: 0%;
-    width: 0;
-  }
   header nav {
     position: fixed;
     width: 100%;
     left: 0;
     top: 5vh;
-    height: 40vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    transform: scale(1, 0);
+    transform-origin: top;
     background-color: #FFF;
     z-index: 99999999;
-    border: 2px red solid;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s ease-in-out;
+  }
+  header nav ul {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  header nav a:hover, header nav a:focus {
+    padding-left: 0;
+  }
+  header nav a:hover::before, header nav a:focus::before {
+    content: none;
+  }
+  header nav.active {
+    transform: scale(1, 1);
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s ease-in-out 250ms;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   }
   header .hamburger {
     display: flex;
@@ -1077,7 +1135,7 @@ footer h3 {
     height: 3px;
     background-color: #202020;
     border-radius: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
   }
   header .hamburger .lineTwo {
     top: 12px;
@@ -1088,7 +1146,80 @@ footer h3 {
   header .hamburger:hover .lineOne, header .hamburger:hover .lineTwo, header .hamburger:hover .lineThree, header .hamburger:focus .lineOne, header .hamburger:focus .lineTwo, header .hamburger:focus .lineThree {
     background-color: #A23B72;
   }
+  header .hamburger.active .lineOne {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+  header .hamburger.active .lineThree {
+    transform: rotate(-45deg);
+    top: 12px;
+  }
+  header .hamburger.active .lineTwo {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
   header .themeContainer {
     display: none;
+  }
+  main {
+    width: 100%;
+  }
+  footer {
+    position: static;
+    width: 100%;
+    height: 8vh;
+  }
+  .footerLight {
+    background-color: #202020;
+    border-top: 1px #51586D solid;
+  }
+  .footerLight h3 {
+    color: #FFF;
+  }
+}
+@media (max-width: 780px) {
+  .toolKitSection ul {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contactSection .contactForm {
+    flex-direction: column-reverse;
+  }
+  .contactSection .contactForm .contactInfo {
+    padding: 0;
+  }
+  .contactSection .contactForm .submitButton {
+    margin: 40px auto;
+  }
+}
+@media (max-width: 700px) {
+  .contactSection .contactForm li {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .contactSection .contactHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contactSection .contactSocial {
+    width: 100%;
+  }
+  .contactSection .contactSocial ul {
+    justify-content: space-between;
+  }
+  .portfolioSection .projectList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .portfolioSection .projectLi:hover, .portfolioSection .projectLi:focus {
+    transform: scale(1);
+  }
+  .projectContainer {
+    width: 100%;
+  }
+  .projectContainer .projectInfo p, .projectContainer .projectInfo h3, .projectContainer .projectLinks a {
+    font-size: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
