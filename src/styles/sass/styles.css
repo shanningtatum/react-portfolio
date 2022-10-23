@@ -497,7 +497,6 @@ header li {
 }
 
 .skipLink {
-  border: 2px red solid;
   position: absolute;
   background-color: #FFF;
   top: 0;

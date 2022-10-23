@@ -5,10 +5,6 @@ function Header() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [toggleNav, setToggleNav] = useState(false);
 
-  const handleScroll = () => {};
-
-  window.addEventListener("scroll", handleScroll);
-
   return (
     <header className={darkMode ? "header headerDark" : "header headerLight"}>
       <a href="#mainContent" className="skipLink">
@@ -47,6 +43,7 @@ function Header() {
           onClick={
             toggleNav ? () => setToggleNav(false) : () => setToggleNav(true)
           }
+          tabIndex="0"
         >
           <span className="lineOne"></span>
           <span className="lineTwo"></span>
