@@ -7,6 +7,7 @@ function Landing() {
   return (
     <section
       className={darkMode ? "landingSection darkTheme" : "landingSection"}
+      id="home"
     >
       <div className="wrapper">
         <h1>
