@@ -29,19 +29,31 @@ function Landing() {
         <div className="socialLinks">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/shannon-tao">
+              <a
+                href="https://www.linkedin.com/in/shannon-tao"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaLinkedinIn />
                 <span className="sr-only">Link to LinkedIn</span>
               </a>
             </li>
             <li>
-              <a href="https://github.com/shanningtatum">
+              <a
+                href="https://github.com/shanningtatum"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaGithub />
                 <span className="sr-only">Link to GitHub</span>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/drawingsbyshanner/">
+              <a
+                href="https://www.instagram.com/drawingsbyshanner/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FaInstagram />
                 <span className="sr-only">Link to Instagram</span>
               </a>
