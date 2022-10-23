@@ -20,7 +20,7 @@ header{
         text-align: center;
 
         a{
-            font-size:clamp(0.9rem, 4vw, 1.2rem);
+            font-size:clamp(1.2rem, 4vw, 1.5rem);
             text-decoration:none;
             transition:color 0.3s;
         }
@@ -56,6 +56,54 @@ header{
         }
     }
 
+    .hamburger{
+        display:none;
+        justify-content:center;
+        position: absolute;
+        top:2.5vh;
+        right:25px;
+        width:50px;
+        height:30px;
+        cursor:pointer;
+
+        .lineOne,.lineTwo,.lineThree{
+            content:'';
+            position: absolute;
+            width:40px;
+            height:3px;
+            background-color:$black;
+            border-radius:20px;
+            transition:background-color 0.3s, transform 0.3s;
+        }
+        .lineTwo{
+            top:12px;
+        }
+        .lineThree{
+            top:24px;
+        }
+
+        &:hover, &:focus{
+            .lineOne, .lineTwo, .lineThree{
+                background-color:$purple;
+            }
+        }
+    }
+
+    .hamburger.active{
+        .lineOne{
+            transform:rotate(45deg);
+            top:12px;
+        }
+        .lineThree{
+            transform:rotate(-45deg);
+            top:12px;
+        }
+        .lineTwo{
+            transition:opacity 0.3s;
+            opacity:0;
+        }
+    }
+
     ul{
         list-style:none;
         display:flex;
@@ -85,6 +133,24 @@ header{
         &:hover, &:focus{
             color:$pink;
         }
+    }
+
+    .hamburger{
+        .lineOne, .lineTwo, .lineThree{
+            background-color:$white;
+        }
+
+        &:hover, &:focus{
+
+            .lineOne, .lineTwo, .lineThree{
+                background-color:$pink;
+
+            }
+        }
+    }
+
+    nav{
+        background-color:$black;
     }
 }
 

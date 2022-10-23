@@ -1,9 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Header() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [toggleNav, setToggleNav] = useState(false);
+
+  const [scroll, setScroll] = useState(false);
+
+  const handleScroll = () => {};
+
+  window.addEventListener("scroll", handleScroll);
 
   return (
     <header className={darkMode ? "header headerDark" : "header headerLight"}>
@@ -17,16 +23,24 @@ function Header() {
         <nav className={toggleNav ? "navBar active" : "navBar"}>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#" className="homeLink">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" className="aboutLink">
+                About
+              </a>
             </li>
             <li>
-              <a href="#portfolio">Portfolio</a>
+              <a href="#portfolio" className="portfolioLink">
+                Portfolio
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" className="contactLink">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>

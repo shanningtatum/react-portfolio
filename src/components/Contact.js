@@ -16,19 +16,19 @@ function Contact() {
           <div className="contactSocial">
             <ul>
               <li>
-                <a href="">
+                <a href="https://www.linkedin.com/in/shannon-tao">
                   <span className="sr-only">Link to LinkedIn</span>
                   <FaLinkedinIn />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://github.com/shanningtatum">
                   <span className="sr-only">Link to GitHub</span>
                   <FaGithub />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="https://www.instagram.com/drawingsbyshanner/">
                   <span className="sr-only">Link to Instagram</span>
                   <FaInstagram />
                 </a>

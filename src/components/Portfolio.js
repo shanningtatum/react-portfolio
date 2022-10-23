@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { projects } from "./toolkit";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Portfolio() {
   const { darkMode } = useContext(DarkModeContext);
-  const [displayInfo, setDisplayInfo] = useState(false);
 
   const moreInfo = (e) => {
     const targetSibling = e.target.nextSibling;
@@ -39,7 +38,7 @@ function Portfolio() {
                   >
                     <img
                       src={project.img}
-                      alt={`Device mockup image of ${project.name} project.`}
+                      alt={`Device mockup of ${project.name} project.`}
                     />
                   </div>
                   <div className="projectInfo">

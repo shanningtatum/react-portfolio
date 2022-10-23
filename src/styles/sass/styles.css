@@ -337,6 +337,10 @@ p {
   font-size: clamp(1.5rem, 4vw, 2.7rem);
 }
 
+section.darkTheme h2::after, section.darkTheme h2::before {
+  color: #FCB0D8;
+}
+
 @font-face {
   font-family: "Playfair Display";
   src: url("../../fonts/PlayfairDisplay-Regular.ttf");
@@ -379,7 +383,7 @@ header .logo {
   text-align: center;
 }
 header .logo a {
-  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -407,6 +411,46 @@ header nav a:hover, header nav a:focus {
 header nav a:hover::before, header nav a:focus::before {
   width: 30px;
 }
+header .hamburger {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 2.5vh;
+  right: 25px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+header .hamburger .lineOne, header .hamburger .lineTwo, header .hamburger .lineThree {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #202020;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+header .hamburger .lineTwo {
+  top: 12px;
+}
+header .hamburger .lineThree {
+  top: 24px;
+}
+header .hamburger:hover .lineOne, header .hamburger:hover .lineTwo, header .hamburger:hover .lineThree, header .hamburger:focus .lineOne, header .hamburger:focus .lineTwo, header .hamburger:focus .lineThree {
+  background-color: #A23B72;
+}
+header .hamburger.active .lineOne {
+  transform: rotate(45deg);
+  top: 12px;
+}
+header .hamburger.active .lineThree {
+  transform: rotate(-45deg);
+  top: 12px;
+}
+header .hamburger.active .lineTwo {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
 header ul {
   list-style: none;
   display: flex;
@@ -431,6 +475,15 @@ header li {
 }
 .headerDark a:hover, .headerDark a:focus {
   color: #FCB0D8;
+}
+.headerDark .hamburger .lineOne, .headerDark .hamburger .lineTwo, .headerDark .hamburger .lineThree {
+  background-color: #FFF;
+}
+.headerDark .hamburger:hover .lineOne, .headerDark .hamburger:hover .lineTwo, .headerDark .hamburger:hover .lineThree, .headerDark .hamburger:focus .lineOne, .headerDark .hamburger:focus .lineTwo, .headerDark .hamburger:focus .lineThree {
+  background-color: #FCB0D8;
+}
+.headerDark nav {
+  background-color: #202020;
 }
 
 .headerLight {
@@ -521,7 +574,6 @@ header li {
   color: #51586D;
 }
 .landingSection .landingText {
-  border: 2px red solid;
   margin: auto;
 }
 
@@ -680,14 +732,15 @@ section:last-child {
 }
 .aboutMeSection p {
   position: relative;
+  font-family: "Inter", sans-serif;
 }
 .aboutMeSection p:nth-child(3):after {
   content: "(I notice it!)";
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   position: absolute;
-  top: -10px;
   font-style: italic;
-  color: #FFF;
+  color: #FCB0D8;
+  font-family: "Caveat Brush", cursive;
 }
 
 .toolKitSection {
@@ -916,7 +969,7 @@ section:last-child {
 }
 .contactSection .contactSocial a {
   color: #FFF;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   transition: color 0.3s;
 }
 .contactSection .contactSocial a:hover, .contactSection .contactSocial a:focus {
@@ -1048,7 +1101,6 @@ footer h3 {
 
 .footerDark {
   background-color: #202020;
-  color: #FFF;
   border-right: 1px #FCB0D8 solid;
 }
 .footerDark h3 {
@@ -1075,7 +1127,7 @@ footer h3 {
 }
 @media (max-width: 810px) {
   header {
-    height: 5vh;
+    height: 8vh;
     width: 100%;
     position: fixed;
     z-index: 99999;
@@ -1086,11 +1138,14 @@ footer h3 {
     max-width: none;
     width: 100%;
   }
+  header .hamburger {
+    display: flex;
+  }
   header nav {
     position: fixed;
     width: 100%;
     left: 0;
-    top: 5vh;
+    top: 8vh;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -1118,48 +1173,19 @@ footer h3 {
     transition: opacity 0.3s, transform 0.3s ease-in-out 250ms;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   }
-  header .hamburger {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 12px;
-    right: 25px;
-    width: 50px;
-    height: 30px;
-    cursor: pointer;
-  }
-  header .hamburger .lineOne, header .hamburger .lineTwo, header .hamburger .lineThree {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    background-color: #202020;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  header .hamburger .lineTwo {
-    top: 12px;
-  }
-  header .hamburger .lineThree {
-    top: 24px;
-  }
-  header .hamburger:hover .lineOne, header .hamburger:hover .lineTwo, header .hamburger:hover .lineThree, header .hamburger:focus .lineOne, header .hamburger:focus .lineTwo, header .hamburger:focus .lineThree {
-    background-color: #A23B72;
-  }
-  header .hamburger.active .lineOne {
-    transform: rotate(45deg);
-    top: 12px;
-  }
-  header .hamburger.active .lineThree {
-    transform: rotate(-45deg);
-    top: 12px;
-  }
-  header .hamburger.active .lineTwo {
-    transition: opacity 0.3s;
-    opacity: 0;
-  }
   header .themeContainer {
-    display: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    margin-left: 20px;
+  }
+  header .themeContainer .themeButton {
+    content: none;
+  }
+  header .themeContainer.darkTheme .themeButton {
+    transform: none;
+    overflow: hidden;
   }
   main {
     width: 100%;
@@ -1167,14 +1193,18 @@ footer h3 {
   footer {
     position: static;
     width: 100%;
-    height: 8vh;
   }
   .footerLight {
-    background-color: #202020;
+    background-color: #202020 !important;
+    padding: 1px;
     border-top: 1px #51586D solid;
   }
   .footerLight h3 {
     color: #FFF;
+  }
+  .footerDark {
+    border-top: 1px #51586D solid;
+    padding: 1px;
   }
 }
 @media (max-width: 780px) {

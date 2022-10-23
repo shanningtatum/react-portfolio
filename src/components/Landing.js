@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 function Landing() {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
   return (
     <section
       className={darkMode ? "landingSection darkTheme" : "landingSection"}
@@ -28,7 +28,7 @@ function Landing() {
         <div className="socialLinks">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/shannon-tao-b95159240/">
+              <a href="https://www.linkedin.com/in/shannon-tao">
                 <FaLinkedinIn />
                 <span className="sr-only">Link to LinkedIn</span>
               </a>

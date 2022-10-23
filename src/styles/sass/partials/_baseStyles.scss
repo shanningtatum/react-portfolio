@@ -43,3 +43,12 @@ p{
     font-size:clamp(1.5rem,4vw, 2.7rem);
 }
 
+section.darkTheme{
+
+    h2{
+        &::after, &::before{
+            color:$pink;
+        }
+    }
+}
+

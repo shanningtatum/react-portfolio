@@ -9,9 +9,6 @@ function Footer() {
         <h3>
           Created by <a href="https://github.com/shanningtatum">Shannon Tao</a>
         </h3>
-        <h3>
-          Design by <a href="#">Marketify</a>
-        </h3>
       </div>
     </footer>
   );
