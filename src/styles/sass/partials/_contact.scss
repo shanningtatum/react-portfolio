@@ -91,6 +91,7 @@
             }
         }
         textarea{
+            resize:none;
             background-color:transparent;
             padding:10px;
             border:1px rgba($white, $alpha:0.5) solid;

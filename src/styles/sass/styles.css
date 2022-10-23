@@ -1030,6 +1030,7 @@ section:last-child {
   color: rgba(255, 255, 255, 0.5);
 }
 .contactSection .contactForm textarea {
+  resize: none;
   background-color: transparent;
   padding: 10px;
   border: 1px rgba(255, 255, 255, 0.5) solid;
