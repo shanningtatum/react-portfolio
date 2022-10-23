@@ -720,6 +720,7 @@ section:last-child {
   flex-basis: 50%;
   width: 80%;
   margin: auto;
+  padding: 40px;
 }
 .aboutMeSection h2::after {
   content: "Who are you?";
