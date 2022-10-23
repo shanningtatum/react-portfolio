@@ -1,4 +1,18 @@
 .contactSection{
+
+    .returnTop{
+        text-align: center;
+        a{
+            text-decoration:none;
+            color:$white;
+            font-family:$sansSerifFont;
+            transition:color 0.3s;
+
+            &:hover{
+                color:$purple;
+            }
+        }
+    }
     .wrapper{
         margin:20px auto;
     }

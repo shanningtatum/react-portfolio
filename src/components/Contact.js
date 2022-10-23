@@ -114,6 +114,9 @@ function Contact() {
             </p>
           </div>
         </div>
+        <div className="returnTop">
+          <a href="#home">Return To Top</a>
+        </div>
       </div>
     </section>
   );

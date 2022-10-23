@@ -938,6 +938,18 @@ section:last-child {
   background-color: lightsalmon;
 }
 
+.contactSection .returnTop {
+  text-align: center;
+}
+.contactSection .returnTop a {
+  text-decoration: none;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  transition: color 0.3s;
+}
+.contactSection .returnTop a:hover {
+  color: #A23B72;
+}
 .contactSection .wrapper {
   margin: 20px auto;
 }

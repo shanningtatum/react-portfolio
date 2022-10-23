@@ -7,7 +7,7 @@ function Footer() {
     <footer className={darkMode ? "footer footerDark" : "footer footerLight"}>
       <div className="wrapper">
         <h3>
-          Created by{" "}
+          Created by
           <a
             href="https://www.linkedin.com/in/shannon-tao"
             target="_blank"
