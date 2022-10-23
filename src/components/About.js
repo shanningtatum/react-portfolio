@@ -15,7 +15,7 @@ function About() {
           <p>
             I'm a front-end developer with experience as a digital artist,
             supervisor, and a customer service rep. My education background in
-            the social services makes inclusion and diversity a priority for me
+            the social services means inclusion and diversity a priority for me
             and allows me to see things from another perspective - the user
             perspective.
           </p>

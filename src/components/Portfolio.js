@@ -45,7 +45,9 @@ function Portfolio() {
                     <h3>{project.name}</h3>
                     <p>{project.desc}</p>
                     <div className="projectLinks">
-                      <a href={project.live}>LIVE</a>
+                      <a href={project.live} target="_blank">
+                        LIVE
+                      </a>
                       <a href={project.github}>GITHUB</a>
                     </div>
                     <div className="projectTools">
