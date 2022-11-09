@@ -13,7 +13,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Shannon Tao
+            &nbsp;Shannon Tao
           </a>
         </h3>
       </div>

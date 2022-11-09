@@ -114,6 +114,10 @@
 }
 
 @media (max-width:780px){
+    .aboutMeSection{
+        width:90%;
+        padding:40px 10px;
+    }
     .toolKitSection ul {
         grid-template-rows:repeat(3, 1fr);
         grid-template-columns:repeat(3, 1fr);
@@ -137,6 +141,10 @@
 }
 
 @media (max-width:500px){
+    .aboutMeSection{
+        width:90%;
+        padding:40px 10px;
+    }
 
     .contactSection{
         .contactHeader{
