@@ -3,6 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const projects = [
   {
+    name: "Apex Roleplay Loading Screen Submission",
+    live: "https://apex-loadingscreen.netlify.app/",
+    github: "https://github.com/shanningtatum/loading-screen",
+    img: "./assets/project4-desktop-mobile.png",
+    desc: "A website where users can submit photos to be featured on the loading screen of the Apex FiveM server.",
+    tool: {
+      tool1: "HTML",
+      tool2: "CSS",
+      tool3: "JavaScript",
+      tool4: "React JS",
+      tool5: "Firebase",
+    },
+  },
+  {
     name: "Shopper Mapper",
     live: "https://shopper-mapper.netlify.app/",
     github: "https://github.com/shopper-mapper-cohort42/project-04",

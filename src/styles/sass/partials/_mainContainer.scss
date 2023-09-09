@@ -109,18 +109,6 @@ section{
     p{
         position: relative;
         font-family:$sansSerifFont;
-
-        &:nth-child(3){
-            &:after{
-                content:'(I notice it!)';
-                font-size:0.9rem;
-                position: absolute;
-                font-style:italic;
-                color:$pink;
-                font-family:$handwritten;
-
-            }
-        }
     }
 
 }

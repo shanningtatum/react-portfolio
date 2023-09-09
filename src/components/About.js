@@ -13,28 +13,28 @@ function About() {
         <div className="aboutMeSection">
           <h2>About Me</h2>
           <p>
-            I'm a front-end developer with experience as a digital artist,
-            supervisor, and a customer service rep. My education background in
-            the social services means inclusion and diversity a priority for me
-            and allows me to see things from another perspective - the user
-            perspective.
+            I'm a front-end developer currently working as a web designer at
+            Costco Wholesale Canada.
           </p>
           <p>
-            My experience as a digital artist makes me sweat the small stuff,
-            the tiny pixels that folks don't notice. &nbsp;
+            I made my career transition about a year ago because I enjoy the
+            unique challenges that coding requires and being able to satisfy my
+            innate curiosity of how things work with my creative side through
+            front-end development is what keeps me motivated to learn more.
           </p>
           <p>
-            I enjoy the unique challenges that coding requires and being able to
-            satisfy my innate curiosity of how things work with my creative side
-            through front-end development is what keeps me motivated to learn
-            more.
+            In my current role, I am responsible for designing and coding weekly
+            marketing material on <a href="https://www.costco.ca/">Costco.ca</a>
+            , brand showcase pages, and email marketing.
           </p>
           <p>
-            I'm always trying to find ways to make things more efficient while
-            making it aesthetically pleasing and I would love to join a team
-            that not only fosters a great learning environment but allows for me
-            to grow as a developer and an individual.
+            In my free time I do like to dabble in side projects. My most recent
+            project is a loading screen submission website for an online gaming
+            community of about 1000+ members.
           </p>
+          <a href="https://apex-loadingscreen.netlify.app/">
+            Check it out here!
+          </a>
         </div>
         <div
           className={darkMode ? "toolKitSection darkTheme" : "toolKitSection"}
